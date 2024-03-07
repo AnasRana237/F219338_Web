@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task No 9</title>
+    <script>
+        function validateForm() {
+            
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+
+            if (firstName.trim() === "") {
+                alert("Please enter your First Name");
+                return false;
+            }
+            if (lastName.trim() === "") {
+                alert("Please enter your Last Name");
+                return false;
+            }
+            if (phoneNumber.trim() === "") {
+                alert("Please enter your PhoneNo");
+                return false;
+            }
+            if (email.trim() === "") {
+                alert("Please enter your email");
+                return false;
+            }
+            if (password.trim() === "") {
+                alert("Please enter your Password");
+                return false;
+            }
+            if (confirmPassword.trim() === "") {
+                alert("Please confirm your Password");
+                return false;
+            }
+
+
+
+            return true; 
+        }
+    </script>
+</head>
+<body>
+    <h1>SIGNUP FORM</h1>
+    <h2>USER DETAILS</h2>
+    <form onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>
+                    <label>*First Name:</label>
+                    <input type="text" id="firstName" placeholder="Enter First Name">
+                </td>
+                <td>
+                    <label>*Last Name:</label>
+                    <input type="text" id="lastName" placeholder="Enter Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*Phone Number:</label>
+                    <input type="text" id="phoneNumber" placeholder="Enter Phone Number">
+                </td>
+                <td>
+                    <label>*Email:</label>
+                    <input type="email" id="email" placeholder="Enter e-mail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*Password:</label>
+                    <input type="password" id="password" placeholder="Enter Password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*Confirm Password:</label>
+                    <input type="password" id="confirmPassword" placeholder="Enter Password Again">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
