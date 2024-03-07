@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colored Buttons</title>
+
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    body {
+      padding: 40px;
+    }
+
+    .btn-basic {
+      background-color: lightgray;
+      color: black;
+    }
+
+    .btn-primary {
+      background-color: rgb(41, 29, 212);
+      color: black;
+    }
+
+    .btn-success {
+      background-color: rgb(61, 211, 15);
+      color: white;
+    }
+
+    .btn-warning {
+      background-color: orange;
+      color: white;
+    }
+
+    .btn-info {
+      background-color: rgb(16, 122, 227);
+      color: white;
+    }
+
+    .btn-default {
+      background-color: lightgray;
+      color: black;
+    }
+
+    .btn-danger {
+      background-color: red;
+      color: white;
+    }
+
+    .btn-link {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <button type="button" class="w3-btn w3-light-gray btn-basic" onclick="displayMessage('Basic Button Clicked')">Basic</button>
+  <button type="button" class="w3-btn w3-light-gray btn-default" onclick="displayMessage('Default Button Clicked')">Default</button>
+  <button type="button" class="w3-btn w3-indigo btn-primary" onclick="displayMessage('Primary Button Clicked')">Primary</button>
+  <button type="button" class="w3-btn w3-green btn-success" onclick="displayMessage('Success Button Clicked')">Success</button>
+  <button type="button" class="w3-btn w3-red btn-danger" onclick="displayMessage('Danger Button Clicked')">Danger</button>
+  <button type="button" class="w3-btn w3-orange btn-warning" onclick="displayMessage('Warning Button Clicked')">Warning</button>
+  <button type="button" class="w3-btn w3-blue btn-info" onclick="displayMessage('Info Button Clicked')">Info</button>
+  <button type="button" class="w3-btn w3-white btn-link" onclick="displayMessage('Link Button Clicked')">Link</button>
+
+ 
+  <script>
+    function displayMessage(message) {
+      alert(message);
+    }
+  </script>
+
+</body>
+</html>
