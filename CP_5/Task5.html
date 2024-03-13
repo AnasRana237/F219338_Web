@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task5</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    .example-class {
+        color: blue;
+    }
+    p{
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <p class="example-class" id="example-id">Click me to find my class and id!</p>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('#container').on('click', '*', function() {
+        
+        var className = $(this).attr('class');
+        var id = $(this).attr('id');
+
+        
+        alert("Class: " + className + "\nID: " + id);
+    });
+});
+</script>
+
+</body>
+</html>

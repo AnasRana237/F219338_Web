@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Image Display</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    #image-container 
+    {
+        display: none; 
+    }
+</style>
+</head>
+<body>
+    <input type="file" id="image-input" accept="image/*">
+    <br>
+    <button id="toggle-button">Show Image</button>
+    <br>
+    <div id="image-container">
+        <img id="uploaded-image" src="#" alt="Uploaded Image">
+    </div>
+
+<script>
+$(document).ready(function() {
+    $('#image-input').on('change', function(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            $('#uploaded-image').attr('src', reader.result);
+        }
+        reader.readAsDataURL(event.target.files[0]);
+        $('#image-container').show(); 
+    });
+
+    $('#toggle-button').on('click', function() {
+        var $button = $(this);
+        var $imageContainer = $('#image-container');
+
+        if ($imageContainer.is(':visible')) {
+            $imageContainer.hide(); 
+            $button.text('Show Image'); 
+        } else {
+            $imageContainer.show(); 
+            $button.text('Hide Image'); 
+        }
+    });
+});
+</script>
+</body>
+</html>
