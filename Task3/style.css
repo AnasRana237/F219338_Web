@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('clock.jpg');
+    color: #000000;
+  }
+  
+  #clock-container {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  #time {
+    font-size: 80px;
+    padding: 80px;
+    /*background-color: linear-gradient(left,rgb(241, 71, 171),rgb(204, 67, 238),rgb(129, 52, 231),rgb(143, 66, 243))*/
+  }
+  
+  #time span {
+    margin: 0 10px; 
+  }
+  
+  #period {
+    font-size: 40px; 
+    margin-left: 20px; 
+  }
+  
